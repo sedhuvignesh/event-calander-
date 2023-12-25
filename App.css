@@ -1,0 +1,225 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f7fa;
+}
+
+/* App Container */
+.app {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #05ca40ce;
+}
+
+/* Main Content Container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+/* Calendar Container */
+.calendar-container {
+  flex: 1;
+  max-width: 500px;
+  margin-right: 2rem;
+}
+
+/* Event Container */
+.event-container {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Responsive Styles for Small Screens */
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+
+  .calendar-container,
+  .event-container {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 2rem;
+  }
+}
+
+/* Calendar Styles */
+.react-calendar {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  font-family: 'Arial', Helvetica, sans-serif;
+  line-height: 1.125em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  transition: background-color 0.2s;
+}
+
+.react-calendar--doubleView {
+  width: 100%;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer {
+  display: flex;
+  margin: -0.5em;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer>* {
+  width: 50%;
+  margin: 0.5em;
+}
+
+/* ... (Rest of the existing calendar styles) */
+
+/* Event Form Styles */
+.event-form {
+  margin-bottom: 20px;
+}
+
+.event-form h2 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.event-form p {
+  font-size: 1.2rem;
+  color: #1403f6;
+}
+
+.event-form input {
+  padding: 10px;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+/* Button Styles */
+.create-btn,
+.update-btn,
+.delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.create-btn {
+  background-color: #ff4081;
+  color: white;
+}
+
+.update-btn,
+.delete-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.create-btn:hover,
+.update-btn:hover,
+.delete-btn:hover {
+  background-color: #ff267f;
+  transform: translateY(-3px);
+}
+
+/* Event List Styles */
+.event-list {
+  margin-top: 20px;
+}
+
+/* Event Cards Styles */
+.event-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.event-card {
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.event-date {
+  font-size: 1rem;
+  color: #f07809;
+}
+
+.event-actions {
+  display: flex;
+}
+
+.update-btn,
+.delete-btn {
+  padding: 8px 12px;
+  margin-left: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.update-btn:hover,
+.delete-btn:hover {
+  background-color: #0056b3;
+}
+
+.event-card-body {
+  padding-bottom: 10px;
+}
+
+.event-title {
+  font-size: 1.5rem;
+  color: #fd0000;
+}
+
+/* Selected State */
+.selected {
+  background-color: #ff4081 !important;
+  color: white;
+}
+
+/* Event Marked State */
+.event-marked {
+  background-color: #ff4081;
+  color: white;
+}
